@@ -17,16 +17,16 @@ def fold_left_candidates(game):
 
 def fold_up_candidates(game):
     candidates = []
-    rotated_board = rotate(game, 1)
+    rotated_board = rotate(game, 3)
     for index in range(len(rotated_board)):
-        add_candidate(candidates, index, game[index])
+        add_candidate(candidates, index, rotated_board[index])
     return candidates
 
 def fold_down_candidates(game):
     candidates = []
-    rotated_board = rotate(game, 3)
+    rotated_board = rotate(game, 1)
     for index in range(len(rotated_board)):
-        add_candidate(candidates, index, game[index])
+        add_candidate(candidates, index, rotated_board[index])
     return candidates
 
 
@@ -34,5 +34,5 @@ def fold_right_candidates(game):
     candidates = []
     rotated_board = rotate(game, 2)
     for index in range(len(rotated_board)):
-        add_candidate(candidates, index, game[index])
+        add_candidate(candidates, index, rotated_board[index])
     return candidates
