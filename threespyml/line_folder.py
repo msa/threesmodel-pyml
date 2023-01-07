@@ -39,11 +39,6 @@ def wall_index_of(line):
             return 2
     return 3
 
-
-def squash(line):
-    return line
-
-
 def fold(line):
     if (can_fold(line)):
         folded_line = line.copy()

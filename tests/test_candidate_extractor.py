@@ -26,16 +26,16 @@ class TestCandidateExtractor(unittest.TestCase):
         self.assertEqual([[1, 3]],  fold_right_candidates([[3, 1, 1, 3], [6, 1, 1, 6], [12, 1, 2, 12], [24, 1, 6, 24]]))
 
     def test_it_extracts_a_single_candidate_from_a_board_with_one_up_foldable_line(self):
-        self.assertEqual([[2, 3]],  fold_up_candidates([[3, 1, 1, 3], [6, 1, 1, 6], [12, 1, 2, 12], [24, 1, 6, 24]]))
+        self.assertEqual([[1, 3]],  fold_up_candidates([[3, 1, 1, 3], [6, 1, 1, 6], [12, 1, 2, 12], [24, 1, 6, 24]]))
 
     def test_it_extracts_a_single_candidate_from_a_board_with_one_down_foldable_line(self):
-        self.assertEqual([[1, 3]],  fold_down_candidates([[3, 1, 1, 3], [6, 1, 1, 6], [12, 1, 2, 12], [24, 1, 6, 24]]))
+        self.assertEqual([[2, 3]],  fold_down_candidates([[3, 1, 1, 3], [6, 1, 1, 6], [12, 1, 2, 12], [24, 1, 6, 24]]))
 
     def test_folding_board_with_two_candidates(self):
         self.assertEqual([[2, 3], [3, 3]], fold_right_candidates([[2, 0, 0, 0], [1, 1, 3, 0], [6, 1, 6, 3], [6, 1, 1, 1]]))
 
     def test_something(self):
-        self.assertEqual([[0, 3]], fold_down_candidates([[6, 1, 3, 2], [3, 1, 6, 3], [2, 6, 1, 1], [0, 1, 0, 0]]))
+        self.assertEqual([[0, 3], [2, 3], [3, 3]], fold_down_candidates([[6, 1, 3, 2], [3, 1, 6, 3], [2, 6, 1, 1], [0, 1, 0, 0]]))
 
     def test_extracts_all_four_candidates_from_a_board_where_all_lines_fold(self):
         self.assertEqual([[0, 3], [1, 3], [2, 3], [3, 3]], fold_left_candidates(

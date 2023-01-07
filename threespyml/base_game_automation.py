@@ -1,4 +1,3 @@
-from board_folder import *
 from score_calculator import *
 from game_controller import GameController
 
@@ -12,11 +11,10 @@ class BaseGameAutomation:
         self.best_game = None
 
     def play(self, game):
-        print("Please override the play(game) method")
-        raise
+        raise Exception("Please override the play(game) method")
 
-    def score_filename(self):
-        return self.__class__.__name__ + ".txt"
+    def score_filename(self, clazz):
+        return clazz.__name__ + ".txt"
 
     def play_many(self, times=100):
         max_score = 0
