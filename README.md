@@ -14,6 +14,6 @@ deep neural network.
 
 I trained a model that showed some promise (mid eighty percent accuracy and a balanced error level between training and validation set).
 
-But in order to get a grast of the actual performance of the model I need to allow it to actually play some games and
-look at the game score distribution.
+But in order to get a grasp of the actual performance of the model I need to allow it to actually play some games and
+look at the game score distribution and it turns out python is a more suited environment for that purpose.
 
